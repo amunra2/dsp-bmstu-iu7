@@ -41,14 +41,14 @@ u_rect_restored = restore_signal(x_rect, x_rect_descr, u_rect_descr, delta_x);
 
 % Графики
 f = figure();
-set(0, "defaultlinelinewidth", 3, "defaultaxesfontsize", 16);
+set(0, "defaultlinelinewidth", 1, "defaultaxesfontsize", 16);
 
 % Гаусс
 subplot(2, 1, 2);
 hold on;
 grid on;
 plot(x_gauss, u_gauss);
-plot(x_gauss_descr, u_gauss_descr, ".r", "markersize", 15);
+plot(x_gauss_descr, u_gauss_descr, ".r", "markersize", 16);
 plot(x_gauss, u_gauss_restored, "g");
 legend("Исходный", "Дискретный", "Восстановленный");
 
@@ -57,7 +57,6 @@ subplot(2, 1, 1);
 hold on;
 grid on;
 plot(x_rect, u_rect);
-plot(x_rect_descr, u_rect_descr, ".r", "markersize", 15);
+plot(x_rect_descr, u_rect_descr, ".r", "markersize", 16);
 plot(x_rect, u_rect_restored, "g");
 legend("Исходный", "Дискретный", "Восстановленный");
-
